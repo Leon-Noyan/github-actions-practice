@@ -8,15 +8,16 @@ on:
 jobs:
  hello:
   runs-on: ubuntu-latest
+
   steps:
-   -name: Say hello
+   - name: Say hello
      run: echo "Hello from Github Actions!"
 
-   -name: Show Date
-    run: Date
+   - name: Show Date
+     run: Date
 
-   -name: Show branch
-    run: echo "Branch: $GITHUB_REF_NAME"
+   - name: Show branch
+     run: echo "Branch: $GITHUB_REF_NAME"
 
-  -name: Finish
-   run: echo "Workflow completed successfully!"
+   - name: Finish
+     run: echo "Workflow completed successfully!"
