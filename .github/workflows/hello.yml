@@ -17,7 +17,8 @@ jobs:
      run: Date
 
    - name: Show Branch
-     run: echo "Branch: $GITHUB_REF_NAME"
+     run: echo
+     "Branch: $GITHUB_REF_NAME"
 
    - name: Finish
      run: echo "Workflow completed successfully!"
