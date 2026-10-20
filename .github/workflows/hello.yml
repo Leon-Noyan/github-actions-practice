@@ -1,39 +1,22 @@
 name: My First Workflow
 
-
 on:
-
-push:
-
-branches:
-
-- main
-
+  push:
+    branches:
+      - main
 
 jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello from GitHub Actions!"
 
-hello:
+      - name: Show Date
+        run: date
 
-runs-on: ubuntu-latest
+      - name: Show Branch
+        run: echo "Branch: $GITHUB_REF_NAME"
 
-
-steps:
-
-- name: Say Hello
-
-run: echo "Hello from GitHub Actions!"
-
-
-- name: Show Date
-
-run: date
-
-
-- name: Show Branch
-
-run: echo "Branch: $GITHUB_REF_NAME"
-
-
-- name: Finish
-
-run: echo "Workflow completed successfully!"
+      - name: Finish
+        run: echo "Workflow completed successfully!"
