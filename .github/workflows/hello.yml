@@ -16,7 +16,7 @@ jobs:
    - name: Show Date
      run: Date
 
-   - name: Show branch
+   - name: Show Branch
      run: echo "Branch: $GITHUB_REF_NAME"
 
    - name: Finish
